@@ -1,0 +1,12 @@
+  .bg1 {
+    /* The image used */
+    background-image: url("../assets/images/AYMAT-FONDO-HORIZONTAL-W300-H122.png");
+    
+    
+    height: 20%;
+  
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
