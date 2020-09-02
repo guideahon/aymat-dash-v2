@@ -122,8 +122,47 @@ document.body.appendChild(el);
 <script type="text/javascript">
     $(function () {
         $("#btnQueryString").bind("click", function () {
-            var url = "monitoreo.html?user=" + encodeURIComponent($("#username").val()) + "&pass=" + encodeURIComponent($("#result").val());
+		var pre = result.value;
+		var pre2 = Array.from(pre);
+		
+		for (i = 0; i < pre2.length; i+=2)
+		{
+		<!-- Si el siguiente código no funciona, meterlo en un if -->
+				pre2[i] = pre2[i].replace('0', 'c');
+    <!-- if(pre2[i] == 0) -->
+    <!-- { -->
+	
+
+
+    <!-- } -->
+
+        }
+		
+		var pre3 = pre2.join("");
+
+            var url = "monitoreo.html?user=" + encodeURIComponent($("#username").val()) + "&pass=" + pre3;
             window.location.href = url;
+			
+			
+			
+			
+			
+			
+			
+		<!-- BACKUP	 -->
+    <!-- $(function () { -->
+        <!-- $("#btnQueryString").bind("click", function () { -->
+            <!-- var url = "monitoreo.html?user=" + encodeURIComponent($("#username").val()) + "&pass=" + encodeURIComponent($("#result").val()); -->
+            <!-- window.location.href = url; -->
+        <!-- }); -->
+    <!-- }); -->
+
+			
+			
+			
+			
+			
+			
         });
     });
 </script>
