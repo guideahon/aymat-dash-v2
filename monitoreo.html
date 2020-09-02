@@ -201,7 +201,7 @@
                                             <div class="d-flex justify-content-around">
                                                 <div class="metric-value d-inline-block">
                                                     <h3 class="mb-1">Día</h3>
-                                                    <h3 class="mb-1 font-weight-bold"><span id='todayEnergy'></span> Kw</h3>
+                                                    <h3 class="mb-1 font-weight-bold"><span id="todayEnergy"></span> Kw</h3>
                                                 </div>
                                                 <div class="icon d-inline-block float-none">
                                                     <img src="pwa/images/icons8-panel-solar-50.png?80172489140" alt="50"
@@ -209,7 +209,7 @@
                                                 </div>
                                                 <div class="metric-value d-inline-block float-right">
                                                     <h3 class="mb-1">Total</h3>
-                                                    <h3 class="mb-1 font-weight-bold"><span id="P_total"></span> Kw</h3>
+                                                    <h3 class="mb-1 font-weight-bold"><span id="totalEnergy"></span> Kw</h3>
                                                 </div>
                                             </div>
 
@@ -223,16 +223,16 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-around">
                                                 <div class="metric-value d-inline-block">
-                                                    <h3 class="mb-1">Día</h3>
-                                                    <h3 class="mb-1 font-weight-bold"><span id="CR_dia"></span> Kw</h3>
+                                                    <h3 class="mb-1">Voltaje Salida</h3>
+                                                    <h3 class="mb-1 font-weight-bold">220 V </h3>
                                                 </div>
                                                 <div class="icon d-inline-block float-none">
                                                     <img src="pwa/images/icons8-electricidad-50.png?80172489140" alt="50"
                                                         class="img-responsive" />
                                                 </div>
                                                 <div class="metric-value d-inline-block float-right">
-                                                    <h3 class="mb-1">Total</h3>
-                                                    <h3 class="mb-1 font-weight-bold"><span id='storagePCharge'></span> Kw
+                                                    <h3 class="mb-1">Corriente</h3>
+                                                    <h3 class="mb-1 font-weight-bold"><span id="AMP"></span> Amp
                                                     </h3>
                                                 </div>
                                             </div>
@@ -249,12 +249,7 @@
                                                 <h2 class="card-header text-center text-uppercase">consumo</h2>
                                                 <div class="card-body">
                                                     <div class="d-flex justify-content-around">
-                                                        <div class="metric-value d-inline-block float-left">
-                                                            <h3 class="mb-1">Día</h3>
-                                                            <h3 class="mb-1 font-weight-bold"><span id='useEnergy'></span>
-                                                                Kw
-                                                            </h3>
-                                                        </div>
+                                                        
                                                         <div class="icon d-inline-block float-none">
                                                             <img src="pwa/images/icons8-cabaña-50.png?80172489140" alt="50"
                                                                 class="img-responsive" />
@@ -262,7 +257,7 @@
                                                         <div class="metric-value d-inline-block float-right">
                                                             <h3 class="mb-1">Total</h3>
                                                             <h3 class="mb-1 font-weight-bold"> <span
-                                                                    id='totalEnergy'></span> Kw
+                                                                    id="activePower"></span> w
                                                             </h3>
                                                         </div>
                                                     </div>
@@ -285,7 +280,8 @@
                                                         </div>
                                                         <div class="metric-value d-inline-block float-right">
                                                             <h3 class="mb-1"> Potencia real</h3>
-                                                            <h3 class="mb-1 font-weight-bold"> xx w
+                                                            <h3 class="mb-1 font-weight-bold"> <span
+                                                                    id="currentPower"></span>
                                                             </h3>
                                                         </div>
                                                     </div>
@@ -335,7 +331,7 @@
                                                         <div class="metric-value d-inline-block float-right">
                                                             <h3 class="mb-1">Total</h3>
                                                             <h3 class="mb-1 font-weight-bold"> <span
-                                                                    id='Preciototal'></span> $
+                                                                    id="Preciototal"></span> $
                                                             </h3>
                                                         </div>
                                                     </div>
@@ -355,7 +351,7 @@
                                                         </div>
                                                         <div class="metric-value d-inline-block float-right">
                                                             <h3 class="mb-1"> Carga de la bateria</h3>
-                                                            <h3 class="mb-1 font-weight-bold"> <span id='storageCapacity'></span>
+                                                            <h3 class="mb-1 font-weight-bold"> <span id="storageCapacity"></span>
                                                             </h3>
                                                         </div>
                                                     </div>
@@ -396,7 +392,7 @@
                 <div class="row">
                     <div class="col-xl-4">
                         <div class="card">
-                            <h5 class="card-header">C02</h5>
+                            <h5 class="card-header">C02 No emitidos</h5>
                             <div class="card-body">
                                 <div class="row align-items-center">
                                     <div class="icon d-inline-block float-left">
@@ -404,7 +400,7 @@
                                             class="img-responsive" />
                                     </div>
                                     <div class="metric-value d-inline-block float-right">
-                                        <h3 class="mb-1 font-weight-bold"><span id='Co2Reduction'></span> Kg CO2 no emitidos
+                                        <h3 class="mb-1 font-weight-bold"><span id="Co2Reduction"></span> Kg CO2
                                         </h3>
                                     </div>
                                 </div>
@@ -423,7 +419,7 @@
                                             class="img-responsive" />
                                     </div>
                                     <div class="metric-value d-inline-block float-right">
-                                        <h3 class="mb-1 font-weight-bold"><span id='Co2tree'></span> árboles salvados
+                                        <h3 class="mb-1 font-weight-bold"><span id="Co2tree"></span> árboles salvados
                                         </h3>
                                     </div>
                                 </div>
@@ -443,7 +439,7 @@
                                             alt="placeholder 50" class="img-responsive" />
                                     </div>
                                     <div class="metric-value d-inline-block float-right">
-                                <h3 class="mb-1 font-weight-bold"><span id='Co2oil'></span> XXXXXXX de petróleo ahorrado</h3>
+                                <h3 class="mb-1 font-weight-bold"><span id="Co2oil"></span> de petróleo ahorrado</h3>
                                     </div>
                                 </div>
                             </div>
@@ -521,17 +517,10 @@
 
     <!-- daterangepicker js -->
     <script src="pwa/libs/js/data.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script>
-        var plant_id;
-        async function login() {
-		
-		
-		
-		
-		
-		    var queryString = new Array();
-   
+	
+	<script type="text/javascript">
+    var queryString = new Array();
+    $(function () {
         if (queryString.length == 0) {
             if (window.location.search.split('?').length > 1) {
                 var params = window.location.search.split('?')[1].split('&');
@@ -543,53 +532,81 @@
             }
         }
         if (queryString["user"] != null && queryString["pass"] != null) {
-            var user = queryString["user"];
-			var pass = queryString["pass"];
-        };
-	
+            user = queryString["user"];
+			pass = queryString["pass"];
+            $("#lblData").html(data);
+        }
+    });
+</script>
 
-	
-            //var user = "bvbvbv";// ingresa usuario
-            //var pass = "vbvb";// ingresa hash
-            const proxy_url = "https://bald-buttery-crayfish.glitch.me";
+<script>
+  
+        async function login() {
+          /*
+          
+    var queryString = new Array();
+    $(function () {
+        if (queryString.length == 0) {
+            if (window.location.search.split('?').length > 1) {
+                var params = window.location.search.split('?')[1].split('&');
+                for (var i = 0; i < params.length; i++) {
+                    var key = params[i].split('=')[0];
+                    var value = decodeURIComponent(params[i].split('=')[1]);
+                    queryString[key] = value;
+                }
+            }
+        }
+        if (queryString["user"] != null && queryString["pass"] != null) {
+            var user2 = queryString["user"];// ingresa usuario
+            var pass2 = queryString["pass"];// ingresa hash
+        }
+    });  
+          
+         */ 
+
+
+            var user = "guidobianconi";// ingresa usuario currentPower
+            var pass = "25d55ad283aa40caf464c76d713cc7ad";// ingresa hash
+          
+          
+            const proxy_url = "https://aymat.herokuapp.com/aymat/plants?u=";
             var requestOptions = {
                 method: 'GET',
                 redirect: 'follow'
             };
             //const res = await fetch(proxy_url+proxy_url+"/?u="+user+"&p="+pass, requestOptions);
-            const res = await fetch(proxy_url + "/test", requestOptions);
+            const res = await fetch(proxy_url + user+"&p="+pass, requestOptions);
             const datos = await res.json();
             console.log(datos);
             const { plantMoneyText, storageCapacity} = datos;
-            plant_id = datos.back.data.plantId;
-            console.log(datos.back.data.plant_id);
+            datapack2(datos.back.data[0].plantId);
+          
+            //console.log(datos.back.data[0].plantId);
             //document.getElementById('plantMoneyText').textContent =plantMoneyText;
             //document.getElementById('storageStatus').textContent = datos1.back.data.storageStatus;
             //document.getElementById('plantName').textContent = datos1.back.data.plantName;           
             //document.getElementById('storagePCharge').textContent = datos.back.data.storagePCharge;
-            document.getElementById('storageCapacity').textContent = datos.back.data.storageCapacity;
+            document.getElementById('storageCapacity').textContent = datos.back.data[0].storageCapacity;
+          document.getElementById('currentPower').textContent = datos.back.data[0].currentPower;
             //document.getElementById('isHaveStorage').textContent = datos.back.data.isHaveStorage;
             //document.getElementById('todayEnergy').textContent = datos.back.data.todayEnergy;
             //document.getElementById('storagePDisCharge').textContent = datos.back.data.storagePDisCharge;
-            //document.getElementById('totalEnergy').textContent = datos.back.data.totalEnergy;
+            //document.getElementById('PS_energy').textContent = datos.back.data.totalEnergy;
         }
-        async function datapack2() {
-            var user = "bvbvbv";// ingresa usuario
-            var pass = "vbvb";// ingresa hash
-            const proxy = "https://cors-anywhere.herokuapp.com/";
-            const proxy_url = "https://bald-buttery-crayfish.glitch.me";
+        async function datapack2(plant_id) {
+            var user = "guidobianconi";// ingresa usuario currentPower
+            var pass = "25d55ad283aa40caf464c76d713cc7ad";// ingresa hash
+            const proxy_url = "https://aymat.herokuapp.com/aymat/plant/";
             var requestOptions = {
                 method: 'GET',
                 redirect: 'follow'
             };
             //const res = await fetch(proxy_url+"/?u="+user+"&p="+pass, requestOptions);
-            const res = await fetch(proxy_url + "/test2", requestOptions);
+            const res = await fetch(proxy_url +plant_id+"?u="+user+"&p="+pass, requestOptions);
             const datos = await res.json();
             console.log(datos);
             const { Co2Reduction, totalEnergy, todayEnergy, useEnergy } = datos;
             const { datalogSn } = datos.deviceList;
-            console.log(datos.deviceList);
-            console.log(datos.Co2Reduction);
             //plant_id = datos.back.data.plantId;
             //document.getElementById('plantMoneyText').textContent = await datos.plantMoneyText;
             //document.getElementById('optimizerType').textContent = datos.optimizerType;
@@ -607,7 +624,7 @@
             document.getElementById('Co2tree').textContent = (Co2Reduction / 2.56).toFixed(0);
             document.getElementById('Co2oil').textContent = (Co2Reduction / 3.84).toFixed(1);
             //document.getElementById('storagePuser').textContent = datos.storagePuser;
-            document.getElementById('useEnergy').textContent = useEnergy;
+            //document.getElementById('useEnergy').textContent = useEnergy;
             //document.getElementById('totalMoneyText').textContent = datos.totalMoneyText;
             //document.getElementById('nominal_Power').textContent = datos.nominal_Power;
             //document.getElementById('lost').textContent = datos.deviceList.lost;
@@ -616,7 +633,8 @@
             //document.getElementById('deviceSn').textContent = datos.deviceList.deviceSn;
             //document.getElementById('deviceStatus').textContent = datos.deviceList.deviceStatus;
             //document.getElementById('pCharge').textContent = datos.deviceList.pCharge;
-            //document.getElementById('activePower').textContent = datos.deviceList.activePower;
+            document.getElementById('activePower').textContent = datos.deviceList[0].activePower;
+             document.getElementById('AMP').textContent = (datos.deviceList[0].activePower/220).toFixed(2);
             //document.getElementById('deviceAilas').textContent = datos.deviceList.deviceAilas;
             //document.getElementById('deviceType').textContent = datos.deviceList.deviceType;
             //document.getElementById('storageType').textContent = datos.deviceList.storageType;
@@ -626,7 +644,6 @@
             //document.getElementById('energy').textContent = datos.deviceList.energy;
         }
         login();
-        datapack2();
     </script>
 
 </body>
