@@ -91,8 +91,7 @@ document.body.appendChild(el);
             <div class="card ">
                 <div class="card-header bg-transparent text-center">
 				<!-- <a href="monitoreo.html"> -->
-				<img class="logo-img" src="pwa/images/LOGOH300x122.png?80172489133" alt="logo" style="width: 100%;
-    height: auto;"></a><span class="splash-description">Por favor ingrese a su cuenta</span></div>
+				<img class="logo-img" src="pwa/images/LOGOH300x122.png?80172489133" alt="logo"></a><span class="splash-description">Por favor ingrese a su cuenta</span></div>
 				
 
 									
@@ -123,46 +122,8 @@ document.body.appendChild(el);
 <script type="text/javascript">
     $(function () {
         $("#btnQueryString").bind("click", function () {
-		var pre = result.value;
-		var pre2 = Array.from(pre);
-		
-		for (i = 0; i < pre2.length; i+=2)
-		{
-		<!-- Si el siguiente código no funciona, meterlo en un if -->
-				pre2[i] = pre2[i].replace('0', 'c');
-    <!-- if(pre2[i] == 0) -->
-    <!-- { -->
-	
-
-
-    <!-- } -->
-
-        }
-		var pre3 = pre2.join("");
-
-            var url = "monitoreo.html?user=" + encodeURIComponent($("#username").val()) + "&pass=" + pre3;
+            var url = "monitoreo.html?user=" + encodeURIComponent($("#username").val()) + "&pass=" + encodeURIComponent($("#result").val());
             window.location.href = url;
-			
-			
-			
-			
-			
-			
-			
-		<!-- BACKUP	 -->
-    <!-- $(function () { -->
-        <!-- $("#btnQueryString").bind("click", function () { -->
-            <!-- var url = "monitoreo.html?user=" + encodeURIComponent($("#username").val()) + "&pass=" + encodeURIComponent($("#result").val()); -->
-            <!-- window.location.href = url; -->
-        <!-- }); -->
-    <!-- }); -->
-
-			
-			
-			
-			
-			
-			
         });
     });
 </script>
