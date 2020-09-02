@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>The Weather Here</title>
+  </head>
+  <body>
+<h1> TEST API</h1>
+<p>
+  <span id='Co2Reduction'></span>°<br />
+  <span id='datalogSn'></span>°<br />
+</p>
+  <script>
+
+        var plant_id;
+
+        async function login(){
+            var user = "bvbvbv";// ingresa usuario
+            var pass = "vbvb";// ingresa hash
+            const proxy_url= "https://bald-buttery-crayfish.glitch.me";
+
+            var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+            };
+            //const res = await fetch(proxy_url+proxy_url+"/?u="+user+"&p="+pass, requestOptions);
+            const res = await fetch(proxy_url+"/test", requestOptions);
+            const datos = await res.json();
+            console.log(datos);
+            const{plantMoneyText,}=datos;
+            plant_id = datos.back.data.plantId;
+            console.log(datos.back.data.plant_id);
+            //document.getElementById('plantMoneyText').textContent =plantMoneyText;
+            //document.getElementById('storageStatus').textContent = datos1.back.data.storageStatus;
+            //document.getElementById('plantName').textContent = datos1.back.data.plantName;           
+            //document.getElementById('storagePCharge').textContent = datos.back.data.storagePCharge;
+            //document.getElementById('storageCapacity').textContent = datos.back.data.storageCapacity;
+            //document.getElementById('isHaveStorage').textContent = datos.back.data.isHaveStorage;
+            //document.getElementById('todayEnergy').textContent = datos.back.data.todayEnergy;
+            //document.getElementById('storagePDisCharge').textContent = datos.back.data.storagePDisCharge;
+            //document.getElementById('totalEnergy').textContent = datos.back.data.totalEnergy;
+            
+
+        }
+        async function datapack2(){
+            var user = "Matias%20Toledo";// ingresa usuario
+            var pass = "57c93b317857a3437f3b778d9455529a";// ingresa hash           
+            //const proxy_url= "http://aymat.herokuapp.com/@/";
+            const proxy_url= "https://aymat.herokuapp.com/";
+            const growatt_url= 'http://server.growatt.com/LoginAPI.do?userName=';
+
+            var requestOptions = {
+            method: 'POST'
+            };
+
+            //const res = await fetch(proxy_url+"/?u="+user+"&p="+pass, requestOptions);
+            const res = await fetch(proxy_url+growatt_url+user+"&password="+pass, requestOptions);
+            const datos = await res.json();
+            console.log(datos);
+            const {Co2Reduction}=datos;
+            const {datalogSn}=datos.deviceList;
+            console.log(datos.deviceList);
+            console.log(datos.Co2Reduction);
+            //plant_id = datos.back.data.plantId;
+            /*document.getElementById('plantMoneyText').textContent = await datos.plantMoneyText;
+            document.getElementById('optimizerType').textContent = datos.optimizerType;
+            document.getElementById('ammeterType').textContent = datos.ammeterType;
+            document.getElementById('storagePgrid').textContent = datos.storagePgrid;
+            document.getElementById('todayEnergy').textContent = datos.todayEnergy;
+            document.getElementById('storageTodayPpv').textContent = datos.storageTodayPpv;
+            document.getElementById('invTodayPpv').textContent = datos.invTodayPpv;
+            document.getElementById('totalEnergy').textContent = datos.totalEnergy;
+            document.getElementById('nominalPower').textContent = datos.nominalPower;
+            document.getElementById('todayDischarge').textContent = datos.todayDischarge;*/
+            document.getElementById('Co2Reduction').textContent = Co2Reduction;
+            /*document.getElementById('storagePuser').textContent = datos.storagePuser;
+            document.getElementById('useEnergy').textContent = datos.useEnergy;
+            document.getElementById('totalMoneyText').textContent = datos.totalMoneyText;
+            document.getElementById('nominal_Power').textContent = datos.nominal_Power;
+            document.getElementById('lost').textContent = datos.deviceList.lost;
+            document.getElementById('location').textContent = datos.deviceList.location;*/
+            document.getElementById('datalogSn').textContent = datalogSn;
+            /*document.getElementById('deviceSn').textContent = datos.deviceList.deviceSn;
+            document.getElementById('deviceStatus').textContent = datos.deviceList.deviceStatus;
+            document.getElementById('pCharge').textContent = datos.deviceList.pCharge;
+            document.getElementById('activePower').textContent = datos.deviceList.activePower;
+            document.getElementById('deviceAilas').textContent = datos.deviceList.deviceAilas;
+            document.getElementById('deviceType').textContent = datos.deviceList.deviceType;
+            document.getElementById('storageType').textContent = datos.deviceList.storageType;
+            document.getElementById('eChargeToday').textContent = datos.deviceList.eChargeToday;
+            document.getElementById('apparentPower').textContent = datos.deviceList.apparentPower;
+            document.getElementById('capacity').textContent = datos.deviceList.capacity;
+            document.getElementById('energy').textContent = datos.deviceList.energy;*/
+
+        }  
+        //login();
+        datapack2();
+  </script>
+  </body>
+</html>

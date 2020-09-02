@@ -1,0 +1,49 @@
+{
+	"manifest_version": 5,
+    "name": "Panel de usuario Aymat",
+    "short_name": "Aymat",
+    "description": "Web app de Aymat",
+    "start_url": "app.html",
+    "display": "fullscreen",
+    "scope": "/",
+    "background_color": "#fdfdfd",
+    "theme_color": "#000000",
+    "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "pwa/images/miniaturas/apple-touch-icon-72x72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "pwa/images/miniaturas/apple-touch-icon-114x114.png",
+      "type": "image/png",
+      "sizes": "114x114"
+    },
+    {
+      "src": "pwa/images/miniaturas/apple-touch-icon-120x120.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "pwa/images/miniaturas/apple-touch-icon-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "pwa/images/miniaturas/apple-touch-icon-152x152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "pwa/images/miniaturas/apple-touch-icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "pwa/images/miniaturas/apple-touch-icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+    ]
+}
