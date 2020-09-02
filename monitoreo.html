@@ -521,10 +521,17 @@
 
     <!-- daterangepicker js -->
     <script src="pwa/libs/js/data.js"></script>
-	
-	<script type="text/javascript">
-    var queryString = new Array();
-    $(function () {
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+        var plant_id;
+        async function login() {
+		
+		
+		
+		
+		
+		    var queryString = new Array();
+   
         if (queryString.length == 0) {
             if (window.location.search.split('?').length > 1) {
                 var params = window.location.search.split('?')[1].split('&');
@@ -536,18 +543,16 @@
             }
         }
         if (queryString["user"] != null && queryString["pass"] != null) {
-            user = queryString["user"];
-			pass = queryString["pass"];
-            $("#lblData").html(data);
-        }
-    });
-</script>
+            var user = queryString["user"];
+			var pass = queryString["pass"];
+				alert(user);
+				alert(pass);
+        };
+	
 
-<script>
-        var plant_id;
-        async function login() {
-            var user = "bvbvbv";// ingresa usuario
-            var pass = "vbvb";// ingresa hash
+	
+            //var user = "bvbvbv";// ingresa usuario
+            //var pass = "vbvb";// ingresa hash
             const proxy_url = "https://bald-buttery-crayfish.glitch.me";
             var requestOptions = {
                 method: 'GET',
