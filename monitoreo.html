@@ -6,16 +6,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="pwa/vendor/bootstrap/css/bootstrap.min.css?v=11">
-    <link href="pwa/vendor/fonts/circular-std/style.css?v=11" rel="stylesheet">
-    <link rel="stylesheet" href="pwa/libs/css/style.css?v=11">
-    <link rel="stylesheet" href="pwa/vendor/fonts/fontawesome/css/fontawesome-all.css?v=11">
-    <link rel="stylesheet" href="pwa/vendor/vector-map/jqvmap.css?v=11">
-    <link href="pwa/vendor/jvectormap/jquery-jvectormap-2.0.2.css?v=11" rel="stylesheet">
-    <link rel="stylesheet" href="pwa/vendor/charts/chartist-bundle/chartist.css?v=11">
-    <link rel="stylesheet" href="pwa/vendor/charts/c3charts/c3.css?v=11">
-    <link rel="stylesheet" href="pwa/vendor/charts/morris-bundle/morris.css?v=11">
-    <link rel="stylesheet" type="text/css" href="pwa/vendor/daterangepicker/daterangepicker.css?v=11" />
+    <link rel="stylesheet" href="pwa/vendor/bootstrap/css/bootstrap.min.css?v=10">
+    <link href="pwa/vendor/fonts/circular-std/style.css?v=10" rel="stylesheet">
+    <link rel="stylesheet" href="pwa/libs/css/style.css?v=10">
+    <link rel="stylesheet" href="pwa/vendor/fonts/fontawesome/css/fontawesome-all.css?v=10">
+    <link rel="stylesheet" href="pwa/vendor/vector-map/jqvmap.css?v=10">
+    <link href="pwa/vendor/jvectormap/jquery-jvectormap-2.0.2.css?v=10" rel="stylesheet">
+    <link rel="stylesheet" href="pwa/vendor/charts/chartist-bundle/chartist.css?v=10">
+    <link rel="stylesheet" href="pwa/vendor/charts/c3charts/c3.css?v=10">
+    <link rel="stylesheet" href="pwa/vendor/charts/morris-bundle/morris.css?v=10">
+    <link rel="stylesheet" type="text/css" href="pwa/vendor/daterangepicker/daterangepicker.css?v=10" />
     <link rel="icon" href="pwa/images/miniaturas/favicon-32x32.png?80172489140">
     <title>Aymat Monitoreo</title>
 </head>
@@ -439,7 +439,7 @@
                                             alt="placeholder 50" class="img-responsive" />
                                     </div>
                                     <div class="metric-value d-inline-block float-right">
-                                <h3 class="mb-1 font-weight-bold"><span id="Co2oil"></span> de petróleo ahorrado</h3>
+                                <h3 class="mb-1 font-weight-bold"><span id="Co2oil"></span> lts de petróleo ahorrado</h3>
                                     </div>
                                 </div>
                             </div>
@@ -503,7 +503,7 @@
     <!-- sparkline js -->
     <script src="pwa/vendor/charts/sparkline/jquery.sparkline.js"></script>
     <!-- dashboard monitoreo js -->
-    <script src="pwa/libs/js/dashboard-monitoreo.js"></script>
+    <!-- <script src="pwa/libs/js/dashboard-monitoreo.js"></script> -->
     <!-- main js -->
     <script src="pwa/libs/js/main-js.js"></script>
     <!-- gauge js -->
@@ -516,18 +516,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
 
     <!-- daterangepicker js -->
-    <script src="pwa/libs/js/data.js"></script>
-	
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <!-- <script src="pwa/libs/js/data.js"></script> -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
 <script>
-        var plant_id;
-        async function login() {
-		
-		
-		
-		
-		
-		    var queryString = new Array();
+
+		var queryString = new Array();
    
         if (queryString.length == 0) {
             if (window.location.search.split('?').length > 1) {
@@ -543,11 +537,35 @@
             var user = queryString["user"];
 			var pass = queryString["pass"];
         };
-	
+		
+            <!-- var user = "guidobianconi";// ingresa usuario currentPower -->
+            <!-- var pass = "25d55ad283aa40caf464c76d713cc7ad";// ingresa hash -->
+			
+        async function login() {
+          /*
+          
+    var queryString = new Array();
+    $(function () {
+        if (queryString.length == 0) {
+            if (window.location.search.split('?').length > 1) {
+                var params = window.location.search.split('?')[1].split('&');
+                for (var i = 0; i < params.length; i++) {
+                    var key = params[i].split('=')[0];
+                    var value = decodeURIComponent(params[i].split('=')[1]);
+                    queryString[key] = value;
+                }
+            }
+        }
+        if (queryString["user"] != null && queryString["pass"] != null) {
+            var user2 = queryString["user"];// ingresa usuario
+            var pass2 = queryString["pass"];// ingresa hash
+        }
+    });  
+          
+         */ 
 
-	
-            //var user = "bvbvbv";// ingresa usuario
-            //var pass = "vbvb";// ingresa hash
+
+
           
           
             const proxy_url = "https://aymat.herokuapp.com/aymat/plants?u=";
@@ -575,8 +593,7 @@
             //document.getElementById('PS_energy').textContent = datos.back.data.totalEnergy;
         }
         async function datapack2(plant_id) {
-            var user = "guidobianconi";// ingresa usuario currentPower
-            var pass = "25d55ad283aa40caf464c76d713cc7ad";// ingresa hash
+
             const proxy_url = "https://aymat.herokuapp.com/aymat/plant/";
             var requestOptions = {
                 method: 'GET',

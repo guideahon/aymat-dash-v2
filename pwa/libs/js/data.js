@@ -6,7 +6,7 @@
         var consumo_diaria=0;
         var consumo_total=0;
 
-        document.getElementById('P_dia').textContent = produccion_diaria;
+        //document.getElementById('P_dia').textContent = produccion_diaria;
         document.getElementById('P_total').textContent = produccion_total;
         document.getElementById('CR_dia').textContent = consumo_red_dia;
         document.getElementById('CR_total').textContent = consumo_red_total;
