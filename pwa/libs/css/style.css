@@ -188,7 +188,7 @@ h2 {
 }
 
 h3 {
-    font-size: 20px;
+
 }
 
 h4 {
@@ -1951,7 +1951,9 @@ Container / Wrapper
     position: relative;
     left: 0;
     margin-left: 264px;
+  /*-----------------------
     min-height: 870px !important;
+-------------------------*/
 }
 
 .dashboard-content {
@@ -2013,7 +2015,7 @@ Pageheader
 .page-breadcrumb .breadcrumb-item {}
 
 .page-breadcrumb .breadcrumb-link {
-    color: #a6a6b7;
+    color: black;
 }
 
 .page-breadcrumb .breadcrumb-link:hover {
@@ -2031,7 +2033,6 @@ Pageheader
     border-radius: 0px;
     border-top: 1px solid #e0e4ef;
     padding-top: 10px;
-    font-size: 12px;
 }
 
 .page-breadcrumb .breadcrumb .breadcrumb-item+.breadcrumb-item::before {
@@ -2044,7 +2045,7 @@ Pageheader
 }
 
 .page-breadcrumb .breadcrumb-item.active {
-    color: #71728e;
+    color: black;
 }
 
 .pageheader-title {
@@ -3215,11 +3216,13 @@ btn-link
     -webkit-box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
     -moz-box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
     box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+      opacity: 0.9;
 }
 
 .card-header {
     background-color: #fff;
     border-bottom: 1px solid #e6e6f2;
+    margin: 0 auto;
 }
 
 .card-title {}
@@ -3228,7 +3231,14 @@ btn-link
     font-size: 14px;
 }
 
-.card-body {}
+.card-body {
+    margin: 0 auto;
+}
+
+.card-body2 {
+  flex: 1 1 auto;
+    padding: 1.25rem;
+}
 
 .card-text {}
 
@@ -5265,7 +5275,9 @@ Vertical Timeline - by CodyHouse.co
     -ms-flex: 1;
     flex: 1;
     text-align: center;
+    /*-----------------------
     display: inline-block;
+-------------------------*/
 }
 
 .card-footer-item-bordered:not(:last-child) {
@@ -6983,3 +6995,229 @@ Media Query
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width:320px) {}
+
+
+
+
+
+
+
+
+
+/*--thank you pop starts here--*/
+.thank-you-pop{
+	width:100%;
+ 	padding:20px;
+	text-align:center;
+}
+.thank-you-pop img{
+	width:76px;
+	height:auto;
+	margin:0 auto;
+	display:block;
+	margin-bottom:25px;
+}
+
+.thank-you-pop h1{
+	font-size: 22px;
+    margin-bottom: 25px;
+	color:#5C5C5C;
+}
+.thank-you-pop p{
+	font-size: 20px;
+    margin-bottom: 27px;
+ 	color:#5C5C5C;
+}
+.thank-you-pop h3.cupon-pop{
+	font-size: 25px;
+    margin-bottom: 40px;
+	color:#222;
+	display:inline-block;
+	text-align:center;
+	padding:10px 20px;
+	border:2px dashed #222;
+	clear:both;
+	font-weight:normal;
+}
+.thank-you-pop h3.cupon-pop span{
+	color:#03A9F4;
+}
+.thank-you-pop a{
+	display: inline-block;
+    margin: 0 auto;
+    padding: 9px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    background-color: #8BC34A;
+    border-radius: 17px;
+}
+.thank-you-pop a i{
+	margin-right:5px;
+	color:#fff;
+}
+#ignismyModal .modal-header{
+    border:0px;
+}
+/*--thank you pop ends here--*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fsmall { font-size: .7em }
+svg { display: block }
+.page-spacer {
+    min-height: 75.2px;
+    height: calc(100% - 160px);
+  width: 80px;
+}
+.battery-text {
+    width: 80px;
+    height: 135px;
+    -webkit-background-clip: text;
+  /*--
+    -webkit-text-fill-color: transparent;
+  --*/
+    background-color: #fff;
+    background-image: linear-gradient(#fff 50%, #c3c3c3 0%);
+    background-repeat: repeat;
+    background-size: 100% 200%;
+    transition: background-position .5s ease, opacity .5s ease;
+    opacity: 0;
+    z-index: 2;
+}
+.battery,
+.battery-text,
+.slider {
+    margin: 0 auto;
+    position: absolute;
+    line-height: 6.38em;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    font-family: Ebrima;
+   /*
+    top: calc(50% - 155px);
+    left: calc(50% - 39.5px);
+   */
+      box-sizing: content-box;
+}
+.pointer { cursor: pointer }
+.battery {
+    border: 5px solid #000;
+    height: 80px;
+    border-radius: 1px;
+    width: 70px;
+    background-color: #000;
+    background-image: linear-gradient(#000 50%, #444 0%);
+    background-repeat: repeat;
+    background-size: 100% 200%;
+    background-position: 0 -100%;
+    transition: background-position .5s ease;
+}
+.battery::after {
+    background-color: ##000;
+    content: '';
+    display: block;
+    height: 10px;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    width: 30px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+}
+
+.bubbles {
+    display: inline-block;
+    position: relative;
+}
+.battery-bubbles {
+    width: 69px;
+    left: calc(50% - 35px);
+    height: 80px;
+}
+.bottom-bubbles {
+    width: 39px;
+    left: calc(50% - 20px);
+    height: 150px;
+}
+.bubbles span {
+    position: relative;
+    margin: 3em 0 0; /* Height bubbles rise to */
+    color: #fff;
+    z-index: 2;
+}
+.individual-bubble {
+    position: absolute;
+    border-radius: 100%;
+    bottom: 0;
+    background-color: #000;
+    z-index: 1;
+}
+.vertical {
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 8px;
+    height: 159.5px;
+    margin: 0;
+    margin-left: 95px;
+}
+.liquid {
+    position: absolute;
+    width: 70px;
+    height: 5px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+    margin-top: -51px;
+    transition: top .5s ease;
+    display: none;
+}
+.wave {
+    -webkit-animation-name: wave-action;
+            animation-name: wave-action;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-duration: .8s;
+            animation-duration: .8s;
+    width: 70px;
+    height: 5px;
+    fill: #000;
+}
+@-webkit-keyframes wave-action {
+    0%   { -webkit-transform: translate(-150px, 0) }
+    100% { -webkit-transform: translate(0, 0) }
+}
+@keyframes wave-action {
+    0%   { transform: translate(-150px, 0) }
+    100% { transform: translate(0, 0) }
+}
+
+/**/
+
+@media all and (max-height: 332px){
+   .onscreen { top: 11px }
+}
+
+/**/
+
+/* Animating the top property in Microsoft Edge does not work so prevent animating it */
+_:-ms-lang(x), _:-webkit-full-screen, .individual-bubble { top: inherit !important }
