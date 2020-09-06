@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="pwa/vendor/bootstrap/css/bootstrap.min.css?v=10"
+    />
+    <link
+      href="pwa/vendor/fonts/circular-std/style.css?v=10"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="pwa/libs/css/style.css?v=10" />
+    <link rel="stylesheet" href="button-style.css?v=10" />
+    <link
+      rel="stylesheet"
+      href="pwa/vendor/fonts/fontawesome/css/fontawesome-all.css?v=10"
+    />
+    <link rel="manifest" href="manifest.json?v=10" />
+    <!-- para forzar la recarga, agregar "?v=10"" al final de css -->
+    <link rel="icon" href="pwa/images/miniaturas/favicon.ico?80172489133" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="pwa/images/miniaturas/favicon.ico?80172489133"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="pwa/images/miniaturas/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="pwa/images/miniaturas/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="pwa/images/miniaturas/apple-touch-icon-180x180.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="pwa/images/miniaturas/apple-touch-icon-167x167.png"
+    />
+
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-image: url("pwa/images/Fondo-paneles.jpg");
+        height: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
+    ></script>
+    <script type="module">
+      // This is the "Offline copy of pages" service worker
+
+      /*
+ This code uses the pwa-update web component https://github.com/pwa-builder/pwa-update to register your service worker,
+ tell the user when there is an update available and let the user know when your PWA is ready to use offline.
+*/
+
+      import "https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate";
+
+      const el = document.createElement("pwa-update");
+      document.body.appendChild(el);
+    </script>
+    <script
+      src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"
+      async=""
+    ></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "ab296904-c454-4136-9140-3acb1ffee913"
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="bg"></div>
+    <!-- ============================================================== -->
+    <!-- login page  -->
+    <!-- ============================================================== -->
+
+    <div class="splash-container">
+      <div class="card ">
+        <div class="card-header bg-transparent text-center">
+          <!-- <a href="monitoreo.html"> -->
+          <img
+            class="logo-img"
+            src="pwa/images/LOGOH300x122.png?80172489133"
+            alt="logo"
+            style="width: 100%;
+    height: auto;"
+          /><span class="splash-description"
+            >Por favor ingrese a su cuenta</span
+          >
+        </div>
+
+        <div class="card-body2">
+          <script src="pwa/libs/js/md5.min.js"></script>
+
+          <form>
+            <div class="form-group">
+              <input
+                class="form-control form-control-lg"
+                id="username"
+                type="text"
+                placeholder="Usuario"
+                autocomplete="off"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                class="form-control form-control-lg"
+                id="password"
+                type="password"
+                placeholder="Contraseña"
+              />
+            </div>
+            <!-- <div class="form-group"> -->
+            <!-- <label class="custom-control custom-checkbox"> -->
+            <!-- <input class="custom-control-input" type="checkbox" ><span class="custom-control-label">Recordar sesion</span> -->
+            <!-- </label> -->
+            <!-- </div> -->
+            <script
+              type="text/javascript"
+              src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
+            ></script>
+            <input id="result" readonly style="display: none;" />
+            <!-- <input id="result" readonly	> -->
+
+            <button
+              type="submit"
+              id="btnQueryString"
+              onclick="result.value=md5(password.value, null);return false"
+              class="btn btn-primary btn-lg btn-block"
+            >
+              Ingresar
+            </button>
+            <script type="text/javascript">
+                $(function () {
+                    $("#btnQueryString").bind("click", function () {
+              var pre = result.value;
+              var pre2 = Array.from(pre);
+
+              for (i = 0; i < pre2.length; i+=2)
+              {
+              <!-- Si el siguiente código no funciona, meterlo en un if -->
+              		pre2[i] = pre2[i].replace('0', 'c');
+                <!-- if(pre2[i] == 0) -->
+                <!-- { -->
+
+
+
+                <!-- } -->
+
+                    }
+              var pre3 = pre2.join("");
+
+                        var url = "monitoreo.html?user=" + encodeURIComponent($("#username").val()) + "&pass=" + pre3;
+                        window.location.href = url;
+
+
+
+
+
+
+
+              <!-- BACKUP	 -->
+                <!-- $(function () { -->
+                    <!-- $("#btnQueryString").bind("click", function () { -->
+                        <!-- var url = "monitoreo.html?user=" + encodeURIComponent($("#username").val()) + "&pass=" + encodeURIComponent($("#result").val()); -->
+                        <!-- window.location.href = url; -->
+                    <!-- }); -->
+                <!-- }); -->
+
+
+
+
+
+
+
+                    });
+                });
+            </script>
+
+            <pwa-install
+              explainer=""
+              descriptionheader="Instalar la aplicación de AYMAT en su dispositivo."
+              installbuttontext="Instalar app"
+              iosinstallinfotext="Haga clic en el botón compartir y luego 'Agregar a la pantalla principal'"
+              style="--install-button-color: #4180BF; align-self: center"
+              >Instalar la app de Aymat</pwa-install
+            >
+
+            <!-- <button type="submit" class="sp_notify_prompt btn btn-secondary btn-lg btn-block">Activar notificaciones</button> -->
+          </form>
+
+          <form>
+            <p></p>
+          </form>
+        </div>
+
+        <div class="card-footer bg-white p-0  ">
+          <div class="card-footer-item card-footer-item-bordered">
+            <a
+              href="https://server.growatt.com/login/findPwd"
+              class="footer-link"
+              >¿Olvidó su contraseña?</a
+            >
+          </div>
+          <div class="card-footer-item card-footer-item-bordered">
+            <a
+              href="https://play.google.com/store/apps/details?id=xyz.appmaker.jeuqbu"
+              class="footer-link"
+              >Consigue la app para Android</a
+            >
+          </div>
+          <div class="card-footer-item card-footer-item-bordered">
+
+            
+       <a class="footer-link" data-toggle="modal" href="#ignismyModal">Consigue la PWA para IOS</a>
+        
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="ignismyModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label=""><span>x</span></button>
+                     </div>
+					
+                    <div class="modal-body">
+                       
+                    <div class="thank-you-pop">
+                      <h1>1- Entra a este sitio desde el navegador Safari.</h1>
+                      <h1>2- Haz click en el botón compartir.</h1>
+                      <h1>3- Haz click en “Añadir a la pantalla de incio”.</h1>
+                    </div>
+                         
+                    </div>
+					
+                </div>
+            </div>
+    </div>
+    
+    <!-- ============================================================== -->
+    <!-- end login page  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <script src="pwa/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="pwa/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
